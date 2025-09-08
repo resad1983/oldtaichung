@@ -1,0 +1,347 @@
+/* ===== 偵錯用的彩色框線 (Debug Borders) ===== 
+#intro-screen { border: 5px solid red !important; }
+#quiz-screen { border: 5px solid blue !important; }
+#result-screen { border: 5px solid green !important; }
+#form-screen { border: 5px solid orange !important; }
+#success-screen { border: 5px solid purple !important; }
+ ===== 偵錯碼結束 ===== */
+
+/* --- 全局與基本樣式 (行動裝置優先) --- */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --light-bg-color: #f4f4f9;
+    --dark-text-color: #333;
+    --light-text-color: #fff;
+    --container-bg-color: #fff;
+    --border-color: #bdc3c7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--light-bg-color);
+    color: var(--dark-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.container {
+    background-color: var(--container-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* --- 畫面切換 --- */
+.screen {
+    display: none;
+}
+.screen.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 標題與文字 --- */
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+h1 { font-size: 1.6em; }
+h2 { font-size: 1.3em; }
+
+p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    text-align: left;
+    margin: 20px 0;
+}
+.role-title {
+    font-size: 1.2em;
+    color: #e67e22;
+    font-weight: bold;
+    margin: -10px 0 15px 0;
+}
+
+/* --- 圖片 --- */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* --- 開頭主視覺圖片的樣式微調 (新版) --- */
+#intro-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* --- 按鈕 --- */
+button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+    width: 100%;
+}
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* --- 選項容器與按鈕 --- */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+.option-btn {
+    background-color: #ecf0f1;
+    color: #34495e;
+    border: 2px solid var(--border-color);
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+}
+.option-btn:hover {
+    background-color: #d8e0e2;
+    border-color: var(--primary-color);
+}
+
+/* --- 結果文字區塊 --- */
+.result-text {
+    text-align: left;
+    margin-top: 20px;
+}
+.result-text h3 {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+    margin: 20px 0 10px 0;
+}
+
+/* --- 結果頁面能力值分析樣式 --- */
+.stats-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: left;
+}
+.stats-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+.stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.stat-role-name {
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-right: 15px;
+    width: 60px;
+}
+
+/* --- 星星評分系統 --- */
+.stars-wrapper {
+    position: relative;
+    color: #e0e0e0;
+    font-size: 1.6em;
+    flex-grow: 1;
+}
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    color: #f5c518;
+}
+.stars-wrapper::before,
+.stars-inner::before {
+    content: '★★★★★';
+}
+
+/* --- 讓分數顯示在星星旁邊的樣式 --- */
+.stat-rating {
+    display: flex;
+    align-items: center;
+}
+.stat-score {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #888;
+    min-width: 45px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* --- 結果頁面活動資訊樣式 --- */
+.event-info {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 2px dashed #ccc;
+    text-align: center;
+}
+.event-info p {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 0.95em;
+}
+.event-info .event-date {
+    font-weight: bold;
+    color: #333;
+}
+.event-info .event-tags {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.event-info .event-link {
+    margin-top: 15px;
+}
+.event-info a {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid var(--secondary-color);
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+.event-info a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* --- 參加抽獎按鈕樣式 --- */
+.draw-button {
+    background-color: #e67e22;
+    margin-top: 20px;
+}
+.draw-button:hover {
+    background-color: #d35400;
+}
+
+/* --- 抽獎表單頁面樣式 --- */
+#form-screen h2 {
+    margin-bottom: 8px;
+}
+#form-screen p {
+    margin-bottom: 25px;
+    font-size: 0.95em;
+    color: #666;
+}
+#draw-form {
+    text-align: left;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.age-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.age-options label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#form-status {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.disclaimer {
+    margin-top: 30px !important;
+    font-size: 0.85em !important;
+    color: #888 !important;
+    text-align: center;
+}
+
+/* --- 提交成功頁面樣式 --- */
+/* 預設遵循 .screen 的隱藏規則，不主動顯示 */
+#success-screen {
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 400px;
+}
+
+/* 只有在被啟用時才用 flex 顯示 */
+#success-screen.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#success-screen h2 {
+    margin-bottom: 15px;
+    color: #27ae60;
+    font-size: 2em;
+}
+#success-screen p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* --- RWD 響應式設計：針對平板與桌面電腦 --- */
+@media (min-width: 768px) {
+    body {
+        align-items: center;
+        padding: 40px;
+    }
+    .container {
+        padding: 40px;
+    }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    button {
+        width: auto;
+        min-width: 200px;
+    }
+}
