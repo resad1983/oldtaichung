@@ -61,7 +61,7 @@ body {
 /* --- 標題與文字 --- */
 h1, h2 {
     color: #2c3e50;
-    margin-bottom: 15px;
+    margin-bottom: 5px; /* 原本是 15px，減少 5px */
 }
 h1 { font-size: 1.6em; }
 h2 { font-size: 1.3em; }
@@ -87,13 +87,13 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin: 15px 0 10px 0; /* 修改這裡：上15px, 左右0, 下10px */
+    margin: 5px 0 5px 0; /* 原本是 上15/下10，改為 上10/下5 */
 }
 
 /* --- 開頭主視覺圖片的樣式微調 (新版) --- */
 #intro-image {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* --- 按鈕 --- */
@@ -106,7 +106,7 @@ button {
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    margin-top: 10px;
+    margin-top: 6px; /* 原本是 10px，減少 2px */
     width: 100%;
 }
 button:hover {
@@ -118,14 +118,14 @@ button:hover {
 .options-container {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* 將選項按鈕之間的間距從 12px 改為 10px */
-    margin-top: 15px; /* 將上邊距從 20px 改為 15px */
+    gap: 6px; /* 原本是 10px，減少 2px */
+    margin-top: 10px; /* 將上邊距從 20px 改為 15px */
 }
 .option-btn {
     background-color: #ecf0f1;
     color: #34495e;
     border: 2px solid var(--border-color);
-    padding: 15px;
+    padding: 10px; /* 原本是 15px，減少上下內邊距 */
     text-align: left;
     width: 100%;
 }
