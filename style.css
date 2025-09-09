@@ -8,12 +8,15 @@
 
 /* --- 全局與基本樣式 (行動裝置優先) --- */
 :root {
-    --primary-color: #3498db;
+    /*--primary-color: #3498db;
     --secondary-color: #2980b9;
-    --light-bg-color: #f4f4f9;
+    --light-bg-color: #f4f4f9;*/
+    --primary-color: #EFF3F6;
+    --secondary-color: #EBF5FB;
+    --light-bg-color: #EAF6F6;
     --dark-text-color: #333;
-    --light-text-color: #fff;
-    --container-bg-color: #fff;
+    --light-text-color: #333;
+    --container-bg-color: #FDFDF6;
     --border-color: #bdc3c7;
 }
 
@@ -210,12 +213,12 @@ button:hover {
 .event-info {
     margin-top: 35px;
     padding-top: 25px;
-    border-top: 2px dashed #ccc;
+    border-top: 2px dashed #333;
     text-align: center;
 }
 .event-info p {
     margin-bottom: 12px;
-    color: #555;
+    color: #333;
     font-size: 0.95em;
 }
 .event-info .event-date {
@@ -223,21 +226,21 @@ button:hover {
     color: #333;
 }
 .event-info .event-tags {
-    color: var(--primary-color);
+    color: #333;
     font-weight: bold;
 }
 .event-info .event-link {
     margin-top: 15px;
 }
 .event-info a {
-    color: var(--secondary-color);
+    color: #333;
     font-weight: bold;
     text-decoration: none;
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid #333;
     transition: color 0.3s, border-bottom-color 0.3s;
 }
 .event-info a:hover {
-    color: var(--primary-color);
+    color: #333;
     border-bottom-color: var(--primary-color);
 }
 
