@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市旅程心理測驗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="intro-screen" class="screen active">
+            <h1>✨ 城市旅程 </h1>
+            <img id="intro-image" src="images/intro-image.png" alt="心理測驗主視覺">
+            <div class="intro-text">
+                <p>🌏 準備好來一趟小小的旅行冒險嗎？</p>
+                <p>想像你走進一個陌生的新地方，街道蜿蜒、人聲與未知的故事正在發生。</p>
+                <p>在這段旅程裡，每一次選擇都會揭示你的「旅行冒險特質」。</p>
+                <p>你會是帶領大家衝鋒陷陣的嚮導？</p>
+                <p>還是細心觀察、默默守護的陪伴者？</p>
+                <p>跟著問題一步步走下去，你的冒險樣貌，將慢慢浮現。</p>
+                <p>🌸 最後，帶著你的冒險特質，一起來舊城感受故事的延續吧！</p>
+            </div>
+            <button id="start-btn">開始旅程</button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <h2 id="question-number"></h2>
+            <p id="question-text"></p>
+            <img id="question-image" src="" alt="Question Image">
+            <div id="options-container" class="options-container">
+                </div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h2>你的旅行角色是：</h2>
+            <h1 id="result-role"></h1>
+            <p id="result-title" class="role-title"></p>
+            <img id="result-image" src="" alt="Result Image">
+            
+            <div class="result-text">
+                <h3>【性格與行動風格】</h3>
+                <p id="result-description"></p>
+                <h3>【旅程啟示】</h3>
+                <p id="result-revelation"></p>
+            </div>
+            
+            <div class="stats-container">
+                <h3>最終能力值分析</h3>
+                <div id="stats-breakdown">
+                    </div>
+            </div>
+
+            <button id="restart-btn">重新測驗</button>
+            <button id="draw-btn" class="draw-button">參加抽獎</button>
+            
+            <div class="event-info">
+                <p>歡迎參與 2025舊室集：ON THE STREET</p>
+                <p class="event-date">📅 2025 / 10 / 25 ㊅ — 10 / 26 ㊐</p>
+                <p class="event-tags">✦ 地方青年 × 街區策展 ✦</p>
+                <p>走回城市起點，讓故事重新發生</p>
+                <p class="event-link">
+                    👉 詳情請前往 
+                    <a href="https://www.instagram.com/2025.on_the_street/" target="_blank" rel="noopener noreferrer">
+                        舊室集 Instagram
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div id="form-screen" class="screen">
+            <h2>參加抽獎活動</h2>
+            <p>感謝您完成測驗！請填寫以下資訊參加抽獎。</p>
+            <form id="draw-form">
+                <div class="form-group">
+                    <label for="nickname">暱稱</label>
+                    <input type="text" id="nickname" name="nickname" required>
+                </div>
+                <div class="form-group">
+                    <label>年齡</label>
+                    <div class="age-options">
+                        <label><input type="radio" name="age" value="18歲以下" required> 18歲以下</label>
+                        <label><input type="radio" name="age" value="18-25歲"> 18-25歲</label>
+                        <label><input type="radio" name="age" value="26-35歲"> 26-35歲</label>
+                        <label><input type="radio" name="age" value="36-45歲"> 36-45歲</label>
+                        <label><input type="radio" name="age" value="46歲以上"> 46歲以上</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="ig-account">Instagram 帳號 (選填)</label>
+                    <input type="text" id="ig-account" name="ig-account">
+                </div>
+                <button type="submit" id="submit-form-btn">送出資料</button>
+                <p id="form-status"></p>
+            </form>
+            <p class="disclaimer">※ 資訊僅提供抽獎結果通知使用</p>
+        </div>
+        
+        <div id="success-screen" class="screen">
+            <h2>提交成功！</h2>
+            <p>感謝您的參與，敬請期待 2025 舊室集！</p>
+            <button id="restart-btn-success">重新測驗</button>
+        </div>
+
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
