@@ -1,109 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>舊室集｜施工中</title>
-  <meta name="description" content="舊室集 ON THE STREET！施工中，敬請期待。" />
-  <link rel="icon" href="/favicon.ico" />
-  <style>
-    :root {
-      --bg:#0f172a;
-      --fg:#e5e7eb;
-      --muted:#9ca3af;
-      --accent:#22c55e;
-    }
-    * { box-sizing: border-box; }
-    html,body { height:100%; }
-    body {
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-      background: radial-gradient(80% 60% at 50% 30%, #1f2937 0%, var(--bg) 60%);
-      color: var(--fg);
-      display:flex; align-items:center; justify-content:center; padding:24px;
-    }
-    .wrap {
-      width: min(960px, 100%);
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px;
-      padding: clamp(16px, 4vw, 32px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-      text-align: center;
-    }
-    .brand {
-      font-size: clamp(20px, 3vw, 28px);
-      letter-spacing: 0.08em;
-      opacity: .9;
-    }
-    .hero {
-      margin: clamp(12px, 3vw, 24px) auto;
-      width: min(560px, 60vw);   /* RWD：大螢幕不超過 560px，小螢幕佔 90% */
-      aspect-ratio: 1 / 1;       /* 永遠是正方形 */
-      border-radius: 50%;        /* 保持圓形容器（可拿掉，若要保留原圖完整透明背景） */
-
-      background-image: url('images/ots-hero.png');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain;  /* 保持比例，完整顯示整張圖 */
-    }
-    h1 { font-size: clamp(22px, 4vw, 36px); margin: 10px 0 6px; }
-    p.lead { color: var(--muted); margin: 0 0 18px; font-size: clamp(14px,2.4vw,16px); }
-    .btns {
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-    .btn {
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.12);
-      color: var(--fg);
-      text-decoration:none;
-      font-weight:600;
-      transition: transform .08s ease, background .2s ease, border-color .2s ease;
-      backdrop-filter: blur(6px);
-    }
-    .btn:hover { transform: translateY(-1px); }
-    .btn.primary {
-      background: linear-gradient(90deg, var(--accent), #16a34a);
-      border-color: transparent;
-      color:#06230f;
-    }
-    .meta { margin-top: 10px; color: var(--muted); font-size: 13px; }
-    footer { margin-top: 16px; color: var(--muted); font-size: 12px; }
-  </style>
-</head>
-<body>
-  <main class="wrap" role="main" aria-labelledby="title">
-    <div class="brand">2025 舊室集・ON THE STREET！</div>
-
-    <!-- 主視覺 -->
-    <div class="hero" aria-hidden="true"></div>
-
-    <h1 id="title">測驗準備中</h1>
-    <p class="lead">整理內容與體驗中，敬請期待 🙌</p>
-
-    <div class="btns">
-      <a class="btn" href="https://www.instagram.com/2025.on_the_street/" target="_blank" rel="noopener">追蹤活動 IG</a>
-    </div>
-
-    <div class="meta">📅 2025 / 10 / 25（六）— 10 / 26（日）</div>
-    <p class="meta">臺中舊城</p>
-    <footer>© 2025 舊室集 ON THE STREET</footer>
-  </main>
-</body>
-</html>
-
-<!--
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>城市旅程心理測驗</title>
+    <title>你的城市風格旅行探索特質</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -111,16 +11,16 @@
     <div class="container">
         
         <div id="intro-screen" class="screen active">
-            <h1>✨ 城市旅程 </h1>
+            <h1>✨ 你的城市風格旅行探索特質 </h1>
             <img id="intro-image" src="images/intro-image.png" alt="心理測驗主視覺">
             <div class="intro-text">
-                <p>你推開門，空氣裡帶著一點清新的味道。</p>
-                <p>今天沒有特別的計畫，只是想要隨意走走，也許在城市的轉角遇見驚喜。</p>
-                <p>沿著街道散步時，你注意到牆角一張泛黃的舊照片。</p>
-                <p>照片裡，是曾經熟悉的身影與場景——市場裡的熱鬧聲、朋友們的笑容、老建築的痕跡。</p>
-                <p>不知不覺，你的腳步已經帶你走進一段未知的旅程。</p>
-                <p>接下來的問題，將像是旅途上的小選擇，它們會慢慢拼湊出你的旅行模樣。</p>
-                <p>或許，最後你會發現，在這座城市的旅程中，有一個角色正等待著你。</p>
+                <p>準備好來一趟小小的旅行冒險嗎？</p>
+                <p>想像你走進一個陌生的新地方，街道蜿蜒、人聲與未知的故事正在發生。</p>
+                <p>在這段旅程裡，每一次選擇都會揭示你的「城市風格旅行探索特質」。</p>
+                <p>你會是帶領大家前往未知探索的嚮導？</p>
+                <p>還是細心觀察、默默守護的陪伴者？</p>
+                <p>跟著問題一步步走下去，你的風格旅行探索特質樣貌，將慢慢浮現。</p>
+                <p>最後，帶著你的探索特質，一起真正來到臺中舊城感受故事的延續吧！</p>
             </div>
             <button id="start-btn">開始旅程</button>
         </div>
@@ -137,7 +37,7 @@
             <h2>你的旅行角色是：</h2>
             <h1 id="result-role"></h1>
             <p id="result-title" class="role-title"></p>
-            <img id="result-image" src="" alt="Result Image">
+            <img id="result-image" src="" alt="Result Image" loading="lazy">
             
             <div class="result-text">
                 <h3>【性格與行動風格】</h3>
@@ -147,7 +47,7 @@
             </div>
             
             <div class="stats-container">
-                <h3>最終能力值分析</h3>
+                <h3>個人能力值分析</h3>
                 <div id="stats-breakdown">
                     </div>
             </div>
@@ -198,7 +98,7 @@
                 <button type="submit" id="submit-form-btn">送出資料</button>
                 <p id="form-status"></p>
             </form>
-            <p class="disclaimer">※ 這些資訊僅提供抽獎結果通知使用</p>
+            <p class="disclaimer">※ 資訊僅提供抽獎結果通知使用</p>
         </div>
         
         <div id="success-screen" class="screen">
@@ -208,8 +108,6 @@
         </div>
 
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
--->
